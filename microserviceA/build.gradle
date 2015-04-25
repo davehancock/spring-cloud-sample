@@ -1,0 +1,35 @@
+
+apply plugin: 'idea'
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE'
+        classpath 'org.springframework:springloaded:1.2.3.RELEASE'
+    }
+}
+
+// We explicitly override IntelliJ's compile output directory for 'Spring Loaded' compatibility
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
+
+    testCompile 'junit:junit:4.8.2'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+}
