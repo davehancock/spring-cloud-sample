@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author David Hancock
- */
+
 public class BeverageReceipt {
 
     private List<Beverage> beverages = new ArrayList<>();

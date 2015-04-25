@@ -8,9 +8,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author David Hancock
- */
+
 public class DefaultBeverageService implements BeverageService {
 
     public static final BigDecimal BEVERAGE_COST = BigDecimal.valueOf(12.49);

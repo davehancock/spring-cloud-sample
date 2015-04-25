@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author David Hancock
- */
+
 @RestController
 @RequestMapping("/beverage")
 public class BeverageController {

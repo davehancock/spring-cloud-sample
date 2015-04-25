@@ -6,9 +6,7 @@ import com.djh.beverage.core.domain.BeverageType;
 
 import java.util.List;
 
-/**
- * @author David Hancock
- */
+
 public interface BeverageService {
 
     Beverage dispenseBeverage();

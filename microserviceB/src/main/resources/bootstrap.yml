@@ -1,0 +1,26 @@
+
+# We specify the server.port here and not application.yml as its also used as metadata
+# for exposure to Eureka server.
+server:
+  port: 2002
+
+
+spring:
+  application:
+    name: microservice
+  cloud:
+    config:
+      # We have chosen to use Euerka to resolve the config server instead of configuring URI
+#      discovery:
+#        enabled: true
+      enabled: false
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+      metadataMap:
+        # We use a concat of the service name and random identifier for this instance ID
+        instanceId: ${spring.application.name}:${random.value}

@@ -1,0 +1,8 @@
+
+spring:
+  application:
+    name: eureka-service-registry
+  cloud:
+    config:
+      # We disable the the lookup of a config server for the Euerka server
+      enabled: false

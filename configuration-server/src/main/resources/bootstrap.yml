@@ -1,0 +1,24 @@
+
+# We specify the server.port here and not application.yml as its also used as metadata
+# for exposure to Eureka server.
+server:
+  port: 9002
+
+
+spring:
+  application:
+    # This name is the convention for a Eureka discoverable config server.
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/daves125125/MicroservicePOC
+      # We disable the config server from also being a config client
+      enabled: false
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/

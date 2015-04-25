@@ -1,0 +1,22 @@
+
+server:
+  port: 9001
+
+
+eureka:
+
+  client:
+    # Even though this is a Eureka server it uses client configuration to contact peers
+    # In this example (local) we set its peer to itself so it doesnt throw peer connection errors.
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
+    # Normally a Euerka server will contact other Euerka servers to fetch backup registries.
+    # As we only have 1 in this example, lets disable this behaviour.
+    fetchRegistry: false
+    registerWithEureka: false
+
+  server:
+    # We set the sync interval to 0 upon startup to avoid delay in this trivial example
+    waitTimeInMsWhenSyncEmpty: 0
+

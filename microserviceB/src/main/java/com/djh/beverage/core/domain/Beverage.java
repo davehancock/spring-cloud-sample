@@ -2,9 +2,7 @@ package com.djh.beverage.core.domain;
 
 import java.math.BigDecimal;
 
-/**
- * @author David Hancock
- */
+
 public class Beverage {
 
     private BeverageType beverageType;
@@ -14,6 +12,9 @@ public class Beverage {
     private int volume;
 
     private BigDecimal cost;
+
+    public Beverage() {
+    }
 
     public Beverage(BeverageType beverageType, String beverageDescription, int volume, BigDecimal cost) {
         this.beverageType = beverageType;

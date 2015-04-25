@@ -4,11 +4,11 @@ import com.djh.beverage.core.service.BeverageService;
 import com.djh.beverage.core.service.DefaultBeverageService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
-/**
- * @author David Hancock
- */
+
+@EnableEurekaClient
 @SpringBootApplication
 public class BeverageLoader {
 

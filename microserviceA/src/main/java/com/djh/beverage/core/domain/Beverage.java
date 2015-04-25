@@ -2,9 +2,7 @@ package com.djh.beverage.core.domain;
 
 import java.math.BigDecimal;
 
-/**
- * @author David Hancock
- */
+
 public class Beverage {
 
     private BeverageType beverageType;

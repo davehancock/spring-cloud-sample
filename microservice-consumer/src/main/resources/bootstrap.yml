@@ -1,0 +1,19 @@
+
+# We specify the server.port here and not in application.yml as its also used as metadata
+# for exposure to Eureka server.
+server:
+  port: 3001
+
+
+spring:
+  application:
+    name: microservice-consumer
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
