@@ -42,12 +42,13 @@ public class BeverageConsumerIntegration {
 
     @Bean
     @Description("HTTP Outbound Gateway")
-    @ServiceActivator(inputChannel = "requestChannel", outputChannel = "responseChannel")
-    public MessageHandler httpOutboundGateway() {
+    @ServiceActivator(inputChannel = "requestChannel")
+    public MessageHandler httpOutboundGateway(MessageChannel responseChannel) {
 
         HttpRequestExecutingMessageHandler messageHandler = new HttpRequestExecutingMessageHandler("http://microservice/beverage/dispense", restTemplate);
         messageHandler.setExpectedResponseType(Beverage.class);
         messageHandler.setHttpMethod(HttpMethod.GET);
+        messageHandler.setOutputChannel(responseChannel);
         return messageHandler;
     }
 

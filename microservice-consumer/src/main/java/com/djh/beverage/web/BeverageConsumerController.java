@@ -20,7 +20,6 @@ public class BeverageConsumerController {
 
     @RequestMapping(value = "/consume", method = RequestMethod.GET)
     public void consumeBeverage() {
-
         beverageConsumerService.consumeBeverage();
     }
 
