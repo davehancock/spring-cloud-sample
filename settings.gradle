@@ -1,1 +1,3 @@
 include 'microserviceA','microserviceB','microservice-consumer','configuration-server','service-registry'
+include 'microserviceZ'
+
